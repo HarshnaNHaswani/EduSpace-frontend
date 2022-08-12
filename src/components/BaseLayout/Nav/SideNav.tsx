@@ -1,37 +1,36 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhotoFilm,
-  faCompass,
   faClock,
+  faCompass,
+  faPhotoFilm,
   faQuestion,
-  faRightToBracket,
   faRightFromBracket,
+  faRightToBracket,
   faUser,
-  faClockRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { Dispatch, SetStateAction } from "react";
-import layoutStyles from "../baselayout.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAuth } from "context/auth-context";
+import { useUser } from "context/user-context";
+import { Dispatch, SetStateAction } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useAuth } from "context/auth-context";
-import { Search } from "../Search/Search";
 import { checkActive } from "utils/checkActive";
-// import { useUser } from "context/user-context";
+import layoutStyles from "../baselayout.module.css";
+import { Search } from "../Search/Search";
 type SideNavType = (props: {
   asideMenu: boolean;
   setAsideMenu: Dispatch<SetStateAction<boolean>>;
 }) => JSX.Element;
 export const SideNav: SideNavType = ({ asideMenu, setAsideMenu }) => {
-  // const {
-  //   authData: { isAuth },
-  //   unAuthorize,
-  // } = useAuth();
-  // const { userDispatch } = useUser();
-  // const navigate = useNavigate();
+  const {
+    authData: { isAuth },
+    unAuthorize,
+  } = useAuth();
+  const { userDispatch } = useUser();
+  const navigate = useNavigate();
   const logButtonHandler = () => {
-    // if (isAuth) {
-    //   unAuthorize();
-    //   userDispatch({ type: "RESET_USER_DATA" });
-    // } else navigate("/auth/login", {replace: true});
+    if (isAuth) {
+      unAuthorize();
+      userDispatch({ type: "RESET_USER_DATA" });
+    } else navigate("/auth/login", { replace: true });
   };
   return (
     <aside
@@ -66,26 +65,23 @@ export const SideNav: SideNavType = ({ asideMenu, setAsideMenu }) => {
           <span>Profile</span>
         </NavLink>
         <button onClick={logButtonHandler}>
-          {
-            // isAuth
-            true ? (
-              <>
-                <FontAwesomeIcon
-                  className={layoutStyles.icon}
-                  icon={faRightToBracket}
-                />
-                <span>Logout</span>
-              </>
-            ) : (
-              <>
-                <FontAwesomeIcon
-                  className={layoutStyles.icon}
-                  icon={faRightFromBracket}
-                />
-                <span>Login</span>
-              </>
-            )
-          }
+          {isAuth ? (
+            <>
+              <FontAwesomeIcon
+                className={layoutStyles.icon}
+                icon={faRightToBracket}
+              />
+              <span>Logout</span>
+            </>
+          ) : (
+            <>
+              <FontAwesomeIcon
+                className={layoutStyles.icon}
+                icon={faRightFromBracket}
+              />
+              <span>Login</span>
+            </>
+          )}
         </button>
       </nav>
     </aside>
