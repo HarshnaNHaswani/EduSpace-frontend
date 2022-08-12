@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300;1,500&family=Roboto+Serif:ital,opsz,wght@1,8..144,200;1,8..144,300;1,8..144,500;1,8..144,600&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap");
+@import url("https://design-with-ira.netlify.app/styles/05-objects/scrollbar.css");
+:root {
+  --color-background: #dbdbdb;
+  --color-text: #3c3c3c;
+  --color-primary: #d8d8d8;
+  --color-primary-inverse: #383838;
+  --color-accent: #232423;
+  --color-accent-inverse: #c2b9a6;
+  --color-hover: #c3c3c3;
+  --color-focus: #b3b3b3;
+  --items-per-row: 4;
+  --item-margin-y: 2ch;
+  --item-margin-x: 1ch;
+  --color-divider: #e9e9e9;
+  --card-shadow-color: #4d4d4d33;
+}
+
+.dark {
+  --color-background: #1b1b1b;
+  --color-text: #b1b1b1;
+  --color-primary: #232323;
+  --color-primary-inverse: #b9b9b9;
+  --color-accent: #c2b9a6;
+  --color-accent-inverse: #232423;
+  --color-hover: #2b2b2b;
+  --color-focus: #313131;
+  --color-divider: #b6b6b6;
+  --card-shadow-color: #59595933;
+}
+* {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+html,
+body,
+.App {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  caret-color: var(--color-text);
+}
+a,
+p,
+button,
+section,
+div {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.number {
+  font-family: "Roboto Mono", monospace;
+}
+a,
+a::before,
+a::after {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
+header,
+footer {
+  font-family: "Roboto Serif", serif;
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Serif", serif;
+  font-weight: 600;
+}
+html,
+body,
+div#root,
+div.App,
+div.gridContainer,
+header,
+footer,
+section,
+nav,
+aside,
+main {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header h1 {
+  background-color: var(--color-accent);
+  color: var(--color-accent-inverse);
+  margin: 0 2rem;
+}
+
+.highlight {
+  background-color: #9acd32;
+  color: #212121;
+  filter: hue-rotate(-60deg);
+}
+
+.dark .highlight {
+  filter: hue-rotate(0deg);
+}
+
+li .video {
+  height: 12rem;
+}
+
+hr.horizontal-rule {
+  width: 80%;
+  padding: 0;
+  border-color: #9996;
+  margin: 1ch 0 2ch 6ch;
+}
+
+.list {
+  --list-item-bullet-space: 0ch;
+}
+li {
+  width: fit-content;
+}
+li.list-item {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.user-name {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2ch;
+}
+.card {
+  width: clamp(20rem, 30rem, 90vw);
+  height: 10rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  box-shadow: 0 0 5px var(--card-shadow-color);
+  background-color: var(--color-focus);
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+.card-heading {
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.icon {
+  width: 200px;
+}
+
+.icon-lg {
+  width: 500px;
+}
+.heading {
+  text-transform: uppercase;
+}
+
+.playlist-card-video-player {
+  max-width: 16rem;
+  max-height: 16rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}

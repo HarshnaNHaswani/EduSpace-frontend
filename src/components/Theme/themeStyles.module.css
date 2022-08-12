@@ -1,0 +1,18 @@
+.btnToggleDarkMode {
+  color: rgb(255, 204, 0);
+  background-color: #48dbfb;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.2em;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 25px rgba(255, 235, 167, 0.45);
+}
+.btnToggleDarkMode.dark {
+  color: var(--color-primary);
+  background-color: var(--color-primary-inverse);
+}
+.btnToggleDarkMode > img {
+  width: 80%;
+}
