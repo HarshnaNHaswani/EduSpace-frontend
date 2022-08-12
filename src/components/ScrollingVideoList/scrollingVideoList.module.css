@@ -1,0 +1,18 @@
+@import url("https://design-with-ira.netlify.app/styles/05-objects/list.css");
+@import url("https://design-with-ira.netlify.app/styles/06-components/nav.css");
+
+.list > .listItem {
+  width: 24rem;
+  height: 24rem;
+  overflow: hidden;
+  padding: 0;
+  margin: 1ch;
+  text-align: left;
+}
+.list > .listItem .center-self {
+  place-self: center;
+}
+.list > .listItem > * {
+  padding: 0;
+  margin: 0;
+}

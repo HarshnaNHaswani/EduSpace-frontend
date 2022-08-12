@@ -1,0 +1,11 @@
+
+.hr {
+  height: 1px;
+  margin: 8px 0 4rem;
+  padding: 0;
+  border-color: var(--color-divider);
+}
+
+.heading {
+  text-align: left;
+}

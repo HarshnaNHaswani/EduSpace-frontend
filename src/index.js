@@ -6,7 +6,7 @@ import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "context/theme-context";
 // import { AuthProvider } from "context/auth-context";
-// import { VideosProvider } from "context/videos-context";
+import { VideosProvider } from "context/videos-context";
 // import { OpenVideosProvider } from "context/open-videos-context";
 // import { CategoriesProvider } from "context/categories-context";
 // import { QuizzesProvider } from "context/quizzes-context";
@@ -21,17 +21,17 @@ root.render(
     <BrowserRouter>
       <ThemeProvider>
         {/* <AuthProvider> */}
-          {/* <UserProvider> */}
-            {/* <CategoriesProvider> */}
-              {/* <QuizzesProvider> */}
-                {/* <VideosProvider> */}
-                  {/* <OpenVideosProvider> */}
-                    <App />
-                  {/* </OpenVideosProvider> */}
-                {/* </VideosProvider> */}
-              {/* </QuizzesProvider> */}
-            {/* </CategoriesProvider> */}
-          {/* </UserProvider> */}
+        {/* <UserProvider> */}
+        {/* <CategoriesProvider> */}
+        {/* <QuizzesProvider> */}
+        <VideosProvider>
+          {/* <OpenVideosProvider> */}
+          <App />
+          {/* </OpenVideosProvider> */}
+        </VideosProvider>
+        {/* </QuizzesProvider> */}
+        {/* </CategoriesProvider> */}
+        {/* </UserProvider> */}
         {/* </AuthProvider> */}
       </ThemeProvider>
     </BrowserRouter>
