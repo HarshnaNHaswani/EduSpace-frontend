@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 1em;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.content > * {
+  margin: 0;
+  margin: 0 2rem;
+  padding: 4px;
+  align-self: flex-start;
+  line-height: 1.5em;
+  transform: scale(1.1);
+}
+.content > .btn {
+  font-weight: 500;
+  box-shadow: 0 0 5px var(--card-shadow-color);
+  border-width: 1px;
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+.content > h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
