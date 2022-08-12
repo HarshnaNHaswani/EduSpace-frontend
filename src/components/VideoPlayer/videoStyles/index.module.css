@@ -1,0 +1,292 @@
+/* @import "./videoPlayer01.module.css";
+@import "./videoPlayer02.module.css";
+@import "./videoPlayer03.module.css"; */
+
+:root {
+  --color-slider-track: aqua;
+  --color-slider-thumb: pink;
+}
+.videoPlayerWrapper {
+  min-height: auto;
+  max-width: 96vw;
+  background-color: inherit;
+  padding: 0;
+}
+.videoPlayerWrapperXs {
+  max-height: 96vh;
+  max-width: clamp(4rem, 40rem, 80vw);
+}
+.videoPlayerWrapperSm {
+  max-height: 96vh;
+  max-width: clamp(12rem, 48rem, 80vw);
+}
+.videoPlayerWrapperMd {
+  max-height: 96vh;
+  max-width: clamp(20rem, 56rem, 80vw);
+}
+.videoPlayerWrapperLg {
+  max-height: 96vh;
+  max-width: clamp(28rem, 64rem, 80vw);
+}
+.portraitVideoPlayerWrapper .videoPlayerWrapperXs,
+.portraitVideoPlayerWrapper .videoPlayerWrapperSm,
+.portraitVideoPlayerWrapper .videoPlayerWrapperMd,
+.portraitVideoPlayerWrapper .videoPlayerWrapperLg {
+  max-width: auto;
+  width: auto;
+  object-fit: contain;
+}
+.portraitVideoPlayerWrapper .videoPlayerWrapperXs {
+  max-height: clamp(4rem, 16rem, 80vh);
+}
+.portraitVideoPlayerWrapper .videoPlayerWrapperSm {
+  max-height: clamp(12rem, 24rem, 80vh);
+}
+.portraitVideoPlayerWrapper .videoPlayerWrapperMd {
+  max-height: clamp(20rem, 32rem, 80vh);
+}
+.portraitVideoPlayerWrapper .videoPlayerWrapperLg {
+  max-height: clamp(28rem, 40rem, 80vh);
+}
+.videoPlayer {
+  position: relative;
+  background-color: inherit;
+  overflow: hidden;
+  display: inline-flex;
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.videoPlayer:hover .video {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.videoPlayerXs {
+  width: clamp(4rem, 40rem, 100%);
+}
+.videoPlayerSm {
+  width: clamp(12rem, 48rem, 100%);
+}
+.videoPlayerMd {
+  width: clamp(20rem, 56rem, 100%);
+}
+.videoPlayerLg {
+  width: clamp(28rem, 64rem, 100%);
+}
+.portraitVideoPlayerWrapper .videoPlayerXs,
+.portraitVideoPlayerWrapper .videoPlayerSm,
+.portraitVideoPlayerWrapper .videoPlayerMd,
+.portraitVideoPlayerWrapper .videoPlayerLg {
+  width: auto;
+  object-fit: scale-down;
+}
+.portraitVideoPlayerWrapper .videoPlayerXs {
+  height: clamp(4rem, 16rem, 100%);
+}
+.portraitVideoPlayerWrapper .videoPlayerSm {
+  height: clamp(12rem, 24rem, 100%);
+}
+.portraitVideoPlayerWrapper .videoPlayerMd {
+  height: clamp(20rem, 32rem, 100%);
+}
+.portraitVideoPlayerWrapper .videoPlayerLg {
+  height: clamp(28rem, 40rem, 100%);
+}
+.video {
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: filter 0.2s ease;
+}
+.btn {
+  background-color: #0009;
+  color: white;
+  place-self: center;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+}
+.broadmenuToggle {
+  font-size: 4em;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  transform: scale(2, 0.5) translate(-30%, -50%);
+}
+
+.invisible {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.6s ease-in;
+}
+
+.visible {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.6s ease-out;
+}
+.submenu {
+  transform: translateY(-100%);
+  will-change: opacity;
+}
+.broadmenu,
+.submenu,
+.progress,
+.bottomBar,
+.btn .icon,
+.btn,
+.keyVideoActions,
+.otherVideoActions .actionWrapper,
+.otherVideoActions {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.videoPlayer:hover .broadmenu {
+  z-index: 2;
+}
+.broadmenu,
+.submenu {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.videoPlayer .broadmenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.submenu {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 4px;
+}
+.submenu button {
+  background-color: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.keyVideoActions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, 10000%);
+  justify-content: space-around;
+  will-change: transform;
+}
+.videoPlayer:hover .keyVideoActions {
+  transform: translate(-50%, -50%);
+}
+.keyVideoActions .btn {
+  border-radius: 50%;
+  background-color: #0007;
+  font-size: clamp(0.8em, 1em, 1.2em);
+  width: clamp(fit-content, 24px, 48px);
+  height: clamp(fit-content, 24px, 48px);
+}
+
+.bottomBar .btn {
+  width: clamp(fit-content, 16px, 24px);
+  height: clamp(fit-content, 16px, 24px);
+  font-size: clamp(0.8em, 1em, 1.2em);
+  padding: 0;
+}
+.btn .icon {
+  justify-content: center;
+}
+
+.bottomBar {
+  flex-flow: column wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4px;
+  padding-top: 0;
+  transform: scale(0.6) translateY(96%);
+  align-items: flex-start;
+  background-color: #b1a877aa;
+  will-change: transform;
+  transition: transform 0.3s ease-in;
+}
+.bottomBar,
+.otherVideoActions {
+  width: 100%;
+}
+.otherVideoActions {
+  justify-content: space-between;
+}
+.otherVideoActions .actionWrapper {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.otherVideoActions .actionWrapper:last-of-type {
+  transform: translateX(-10%);
+}
+.videoPlayer:hover .bottomBar {
+  transform: translateY(-4%);
+  transition: transform 0.2s ease-out;
+}
+.progress {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  row-gap: 1ch;
+}
+.progress .progressBar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-4px, -40%);
+  will-change: transform;
+  transition: transform 0s ease-in-out 0.3s;
+}
+.videoPlayer:hover .progressBar {
+  height: 8px;
+  transform: translate(-4px, 50%);
+  transition: transform 0s ease-out;
+  cursor: pointer;
+}
+
+.portraitVideoPlayerWrapper .video {
+  max-height: 100%;
+  width: auto;
+  min-width: 60%;
+  max-width: 80%;
+  object-fit: scale-down;
+}
+@media screen and (max-width: 25em) {
+  .bottomBar {
+    transform: scale(0.6) translateY(125%);
+    font-size: 10px;
+  }
+  .bottomBar .btn {
+    font-size: clamp(1.2em, 1.6em, 2em);
+  }
+  .broadmenuToggle {
+    transform: scaleY(0.3) translateY(-120%);
+  }
+
+  .videoPlayer:hover .keyVideoActions {
+    transform: translate(-50%, -65%);
+  }
+
+  .videoPlayer:hover .broadmenuToggle {
+    transform: scaleY(0.3) translateY(-120%);
+  }
+  .videoPlayer:hover .submenu {
+    transform: translateY(-125%);
+  }
+}
