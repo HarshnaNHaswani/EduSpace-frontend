@@ -1,0 +1,24 @@
+.card > * {
+  z-index: 2;
+}
+.card {
+  position: relative;
+}
+.icon {
+  height: 80%;
+  width: 80%;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  filter: hue-rotate(30deg);
+}
+
+.icon.png {
+  /* opacity: 0.05; */
+  height: 100%; 
+  width: auto; 
+}
+
