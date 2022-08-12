@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import { BaseLayout } from "components";
+import { BaseLayout } from "components/BaseLayout";
 import { RequiresAuth } from "components/RequiresAuth";
 import { Auth } from "pages/Auth";
 import { Explore } from "pages/Explore";
