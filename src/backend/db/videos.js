@@ -1,0 +1,148 @@
+export const videos = [
+  {
+    _id: "1",
+    title: "Design Basics",
+    description: "Web Tech Foundation",
+    creator: "Pexels",
+    createdAt: "2022-01-31",
+    likes: 5,
+    dislikes: 3,
+    views: {
+      lastSevenDays: 13,
+      lastMonth: 15,
+      lastSixMonths: 150,
+      total: 512,
+    },
+    category: ["1", "9"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740975/vidLib/Pexels_Videos_1580507_cn8ya6.mp4",
+    poster: "",
+    relatedQuizzes: ["2"],
+    comments: [
+      {
+        userId: "fykffh8rmijpo",
+        comment: "this was good",
+      },
+    ],
+  },
+  {
+    _id: "2",
+    title: "React",
+    description: "React JS",
+    creator: "Pexels",
+    createdAt: "2022-02-17",
+    likes: 7,
+    dislikes: 2,
+    views: {
+      lastSevenDays: 31,
+      lastMonth: 115,
+      lastSixMonths: 10,
+      total: 177,
+    },
+    category: ["1", "9"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740978/vidLib/Pexels_Videos_2086113_plgekh.mp4",
+    poster: "",
+    relatedQuizzes: ["3", "1"],
+    comments: [
+      {
+        userId: "rognkijsvxysg",
+        comment: "Needs more depth",
+      },
+    ],
+  },
+  {
+    _id: "3",
+    title: "Machine Learning",
+    description: "ML",
+    creator: "Pexels",
+    createdAt: "2022-03-14",
+    likes: 17,
+    dislikes: 12,
+    views: {
+      lastSevenDays: 56,
+      lastMonth: 16,
+      lastSixMonths: 29,
+      total: 112,
+    },
+    category: ["3"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740976/vidLib/video_vqnf12.mp4",
+    poster: "",
+    relatedQuizzes: [],
+    comments: [
+      {
+        userId: "fykffh8rmijpo",
+        comment: "Amazzingggggg!!",
+      },
+    ],
+  },
+  {
+    _id: "4",
+    title: "Linux",
+    description: "Linux Commands",
+    creator: "Pexels",
+    createdAt: "2022-03-21",
+    likes: 64,
+    dislikes: 29,
+    views: {
+      lastSevenDays: 31,
+      lastMonth: 55,
+      lastSixMonths: 51,
+      total: 247,
+    },
+    category: ["2"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740974/vidLib/Pexels_Videos_1795798_ibui4r.mp4",
+    poster: "",
+    relatedQuizzes: [],
+    comments: [
+      {
+        userId: "rognkijsvxysg",
+        comment: "This vvideo helped me remember commands easily",
+      },
+    ],
+  },
+  {
+    _id: "5",
+    title: "Axios",
+    description: "All about axios and how to use it",
+    creator: "Pexels",
+    createdAt: "2022-04-11",
+    likes: 17,
+    dislikes: 8,
+    views: {
+      lastSevenDays: 37,
+      lastMonth: 15,
+      lastSixMonths: 150,
+      total: 389,
+    },
+    category: ["5", "6"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740973/vidLib/Pexels_Videos_1580505_fdakow.mp4",
+    poster: "",
+    relatedQuizzes: [],
+    comments: [],
+  },
+  {
+    _id: "6",
+    title: "Agile",
+    description: "Software Development Technique",
+    creator: "Pexels",
+    createdAt: "2022-06-18",
+    likes: 17,
+    dislikes: 12,
+    views: {
+      lastSevenDays: 3,
+      lastMonth: 15,
+      lastSixMonths: 150,
+      total: 170,
+    },
+    category: ["8"],
+    src:
+      "https://res.cloudinary.com/harshna/video/upload/v1656740972/vidLib/pexels-rodnae-productions-8363813_dhjhuh.mp4",
+    poster: "",
+    relatedQuizzes: [],
+    comments: [],
+  },
+];
