@@ -8,7 +8,7 @@ import { ThemeProvider } from "context/theme-context";
 // import { AuthProvider } from "context/auth-context";
 import { VideosProvider } from "context/videos-context";
 // import { OpenVideosProvider } from "context/open-videos-context";
-// import { CategoriesProvider } from "context/categories-context";
+import { CategoriesProvider } from "context/categories-context";
 // import { QuizzesProvider } from "context/quizzes-context";
 // import { UserProvider } from "context/user-context";
 
@@ -22,15 +22,15 @@ root.render(
       <ThemeProvider>
         {/* <AuthProvider> */}
         {/* <UserProvider> */}
-        {/* <CategoriesProvider> */}
-        {/* <QuizzesProvider> */}
-        <VideosProvider>
-          {/* <OpenVideosProvider> */}
-          <App />
-          {/* </OpenVideosProvider> */}
-        </VideosProvider>
-        {/* </QuizzesProvider> */}
-        {/* </CategoriesProvider> */}
+        <CategoriesProvider>
+          {/* <QuizzesProvider> */}
+          <VideosProvider>
+            {/* <OpenVideosProvider> */}
+            <App />
+            {/* </OpenVideosProvider> */}
+          </VideosProvider>
+          {/* </QuizzesProvider> */}
+        </CategoriesProvider>
         {/* </UserProvider> */}
         {/* </AuthProvider> */}
       </ThemeProvider>
