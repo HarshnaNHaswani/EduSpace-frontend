@@ -1,0 +1,58 @@
+.detailedCard .content {
+  position: relative;
+}
+
+.detailedCard .content > .btn {
+  display: none;
+}
+.detailedCard h3,
+.detailedCard li {
+  margin: 0;
+  padding: 0;
+}
+
+.detailedCard .primaryContent,
+.detailedCard .videoActions {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.detailedCard .primaryContent {
+  justify-content: space-between;
+  z-index: 1;
+  width: 88%;
+}
+.commentBox {
+  /* filter: hue-rotate(20deg); */
+  background-color: var(--color-focus);
+  margin: 2ch 0 2ch 2ch;
+}
+.commentInputSection {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+.commentInputSection textarea {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  border-bottom: 2px solid var(--color-text);
+  outline: none;
+  resize: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-flow: row wrap-reverse;
+  height: fit-content;
+  min-height: 1em;
+  max-height: 6em;
+  width: 100%;
+}
+.commentInputSection button {
+  background-color: var(--color-accent);
+  color: var(--color-accent-inverse);
+  font-weight: 400;
+  align-self: flex-end;
+}
