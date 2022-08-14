@@ -22,6 +22,8 @@
     "miragejs": "^0.1.45",
     "mockman-js": "^1.1.5",
     "react-router-dom": "^6.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
     "uuid": "^8.3.2",
@@ -44,10 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   
     "overrides": {
