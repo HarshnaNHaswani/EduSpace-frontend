@@ -15,7 +15,6 @@ export function ToggleMenu({
 }) {
   return (
     <button
-      // type="button"
       title={title ?? "Menu"}
       onClick={() => {
         setMenu((prev: boolean) => !prev);
