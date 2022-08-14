@@ -5,12 +5,12 @@ import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "context/theme-context";
-// import { AuthProvider } from "context/auth-context";
+import { AuthProvider } from "context/auth-context";
 import { VideosProvider } from "context/videos-context";
 // import { OpenVideosProvider } from "context/open-videos-context";
 import { CategoriesProvider } from "context/categories-context";
 // import { QuizzesProvider } from "context/quizzes-context";
-// import { UserProvider } from "context/user-context";
+import { UserProvider } from "context/user-context";
 
 // Call make Server
 
@@ -20,8 +20,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        {/* <AuthProvider> */}
-        {/* <UserProvider> */}
+        <AuthProvider>
+        <UserProvider>
         <CategoriesProvider>
           {/* <QuizzesProvider> */}
           <VideosProvider>
@@ -31,8 +31,8 @@ root.render(
           </VideosProvider>
           {/* </QuizzesProvider> */}
         </CategoriesProvider>
-        {/* </UserProvider> */}
-        {/* </AuthProvider> */}
+        </UserProvider>
+        </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
