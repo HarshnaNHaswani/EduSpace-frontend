@@ -1,0 +1,40 @@
+.titleOnlyCard {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 0 8px var(--card-shadow-color);
+}
+
+.titleOnlyCard :first-child {
+  flex-basis: 42%;
+}
+
+.titleOnlyCard .content * {
+  margin: 0;
+  padding: 4px 8px 0;
+  max-width: 92%;
+}
+
+.titleOnlyCard .content {
+  border-left: 1px solid var(--card-shadow-color);
+  justify-content: center;
+  align-items: flex-start;
+  width: clamp(10rem, 17rem, 58%);
+  padding-left: 2ch;
+  flex-grow: 1;
+}
+.titleOnlyCard .heading {
+  height: auto;
+  max-height: 3em;
+  line-height: 1.33em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.titleOnlyCard .text {
+  max-height: 1.33;
+  line-height: 1.33em;
+  text-overflow: ellipsis;
+  font-size: 0.8em;
+}
