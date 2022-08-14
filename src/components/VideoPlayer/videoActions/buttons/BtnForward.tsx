@@ -12,7 +12,6 @@ export const BtnForward = ({
   };
   return (
     <button
-      // type="button"
       className={`btn btn-icon bg-secondary ${playerStyles.btn}`}
       onClick={forward}
       disabled={videoRef.current?.ended}
