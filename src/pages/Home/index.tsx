@@ -32,7 +32,6 @@ export const Home = (): JSX.Element => {
     <div>
       <>
         {loadState && <p>Loading......</p>}
-        {/* {error && error?.response && <p>An Error Occured</p>} */}
         <section>
           <h3 className={`${homeStyles.heading}`}>Latest</h3>
           <ScrollingVideoList propKey={"latest"} videos={latestContent} />

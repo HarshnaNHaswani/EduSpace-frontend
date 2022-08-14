@@ -10,11 +10,11 @@ export type SetUserType = {
   payload: {
     userData: UserDataType;
     userLists: {
-      playlistsData: PlaylistDataType[];
-      watchlater: VideoDataType[];
-      history: VideoDataType[];
-      likes: VideoDataType[];
-      dislikes: VideoDataType[];
+      playlistsData: PlaylistDataType[] | [];
+      watchlater: VideoDataType[] | [];
+      history: VideoDataType[] | [];
+      likes: VideoDataType[] | [];
+      dislikes: VideoDataType[] | [];
     };
   };
 };
