@@ -14,7 +14,6 @@ export const BtnMute = ({
 
   return (
     <button
-      // type="button"
       className={`btn btn-icon bg-secondary ${playerStyles.btn}`}
       onClick={toggleMute}
     >
