@@ -26,7 +26,6 @@ export const BroadMenu = ({
     <div className={playerStyles.broadmenu}>
       <section key={"broadmenuToggle"} className={playerStyles.toggleWrapper}>
         <button
-          // type="button"
           className={`${playerStyles.btn} ${playerStyles.broadmenuToggle}  ${
             broadMenu ? playerStyles.invisible : playerStyles.visible
           }`}

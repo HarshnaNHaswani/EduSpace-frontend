@@ -1,4 +1,3 @@
-import { Auth } from "pages/Auth";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import layoutStyles from "./baselayout.module.css";
@@ -14,7 +13,6 @@ export const BaseLayout = () => {
 
       <main className={layoutStyles.gridChild}>
         <Outlet />
-        {/* <Auth/> */}
       </main>
       <footer className={layoutStyles.gridChild}>
         Developed by <span className="highlight">Harshna Haswani</span>

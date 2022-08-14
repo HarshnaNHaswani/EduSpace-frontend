@@ -12,7 +12,6 @@ export const BtnRepeat = ({
   };
   return (
     <button
-      // type="button"
       className={`btn btn-icon bg-secondary ${playerStyles.btn}`}
       onClick={toggleOnRepeat}
       title="repeat"
