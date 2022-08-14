@@ -1,0 +1,27 @@
+.playlistListing {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlistListing a {
+  justify-self: flex-start;
+}
+.playlistListing .cardWrapper {
+  position: relative;
+  width: fit-content;
+}
+.playlistListing .btnDelete {
+  position: absolute;
+  top: 15%;
+  right: 4%;
+  background-color: inherit;
+  color: inherit;
+  z-index: 1;
+}
+.playlistListing > a > * {
+  min-height: 12rem;
+  max-height: 12rem;
+  overflow: hidden;
+}
