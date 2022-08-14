@@ -12,7 +12,6 @@ export const BtnRewind = ({ videoRef }: { videoRef: VideoRefType }):JSX.Element 
   };
   return (
     <button
-      // type="button"
       className={`btn btn-icon bg-secondary ${playerStyles.btn}`}
       onClick={rewind}
       disabled={progress === 0}

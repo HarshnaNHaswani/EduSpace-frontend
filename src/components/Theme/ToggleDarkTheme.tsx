@@ -19,7 +19,6 @@ export const ToggleDarkTheme = () => {
       {dark ? (
         <>
           <img src={Sun} alt="light-mode" title="switch to light" />
-          {/* <FontAwesomeIcon icon={faSun} className="light" /> */}
         </>
       ) : (
         <img src={Moon} alt="dark-mode" title="switch to dark" />
