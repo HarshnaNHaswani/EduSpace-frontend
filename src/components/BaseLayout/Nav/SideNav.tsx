@@ -1,21 +1,20 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhotoFilm,
-  faCompass,
   faClock,
+  faCompass,
+  faPhotoFilm,
   faQuestion,
-  faRightToBracket,
   faRightFromBracket,
+  faRightToBracket,
   faUser,
-  faClockRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { Dispatch, SetStateAction } from "react";
-import layoutStyles from "../baselayout.module.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "context/auth-context";
-import { Search } from "../Search/Search";
-import { checkActive } from "utils/checkActive";
 import { useUser } from "context/user-context";
+import { Dispatch, SetStateAction } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { checkActive } from "utils/checkActive";
+import layoutStyles from "../baselayout.module.css";
+import { Search } from "../Search/Search";
 type SideNavType = (props: {
   asideMenu: boolean;
   setAsideMenu: Dispatch<SetStateAction<boolean>>;
